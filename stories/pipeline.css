@@ -1,0 +1,139 @@
+.light {
+  --pipeline-background: #ffffff;
+  --pipeline-border: 1px solid #c7c7c9;
+  --text-color: #150f2c;
+  --title-color: #9b97a4;
+  --progress-bar-highlight: #feb969;
+  --progress-bar-background: #bbbac1;
+}
+
+.dark {
+  --pipeline-background: #2E3741;
+  --pipeline-border: 1px solid #fdb970;
+  --text-color: #FFF;
+  --title-color: #FFF;
+  --progress-bar-highlight: #feb969;
+  --progress-bar-background: #bbbac1;
+}
+
+.container {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 15px 20px;
+  border: var(--pipeline-border);
+  border-radius: 15px;
+  background-color: var(--pipeline-background);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.pipeline-image {
+  width: 130px;
+  min-width: 130px;
+  height: auto;
+}
+
+.pipeline-info {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  padding: 0 20px;
+}
+
+.pipeline-name {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.pipeline-title {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.pipeline-title.sub-title {
+  font-size: 14px;
+}
+
+.status-area {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  min-width: 300px;
+  margin-top: 10px;
+}
+
+.status-header {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.status-header svg {
+  color: var(--text-color);
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.progress {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--progress-bar-background);
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar-time {
+  width: 0%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--progress-bar-highlight);
+}
+
+.progress-info {
+  display: grid;
+  grid-template-columns: auto max-content;
+}
+
+.progress-label {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.progress-value {
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .container, .description-area {
+    flex-direction: column;
+  }
+  .status-area, .pipeline-info {
+    width: 100%;
+  }
+}
