@@ -36,3 +36,15 @@ export const Dark: Story = {
     theme: 'dark',
   },
 };
+
+export const Completed: Story = {
+  args: {
+    name: 'Pipeline Name',
+    title: 'Your pipeline is complete',
+    subTitle: 'The build process can take up to two hours.\nWe will send you an email when setup is complete',
+    status: 'Completed',
+    totalTime: 10000,
+    elapsedTime: 10000,
+    theme: 'light',
+  },
+};
